@@ -1,0 +1,17 @@
+[general]
+import = [ "./themes/tokyo-night.toml" ]
+
+[window]
+padding = { x = 10, y = 10 }
+opacity = 0.95
+blur = true
+
+[font]
+size = 10
+normal.family = "JetBrainsMono Nerd Font"
+
+[terminal]
+shell.program = "/bin/zsh"
+
+[mouse]
+hide_when_typing = true
