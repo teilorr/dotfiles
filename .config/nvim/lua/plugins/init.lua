@@ -13,14 +13,21 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		event = "VeryLazy",
-		init = function()
-			require("nvim-tree").setup()
-		end,
+    opts = { },
 	},
-	"xiyaowong/transparent.nvim",
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = { },
+  },
+
+  "xiyaowong/transparent.nvim",
+
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-cmdline",
 
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
-
 }
