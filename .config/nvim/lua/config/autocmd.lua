@@ -1,10 +1,12 @@
 vim.api.nvim_create_augroup("AutoFormat", {})
 vim.api.nvim_create_autocmd(
   "BufWritePre", {
+    pattern = "*.py",
     group = "AutoFormat",
     callback = function()
-      vim.lsp.buf.format({ async = false })
-    end,
+      vim.cmd("silent !black --quiet %")
+      vim.cmd("edit")
+    end
   }
 )
 
