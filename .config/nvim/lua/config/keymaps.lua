@@ -3,6 +3,9 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+vim.keymap.set("n", "<Tab>", ":bnext<CR>",   { noremap = true, silent = true })
+vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-e>", "<Esc>",  { noremap = true, silent = true })
 vim.keymap.set("i", "jj",    "<Esc>",  { noremap = true, silent = true })
