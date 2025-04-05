@@ -87,7 +87,6 @@ alias lt='exa --color --icons --tree'
 alias la='exa --color --icons --all'
 alias ls='exa --color --icons'
 alias ff='fastfetch'
-alias nvim='nvfzf'
 alias c='clear'
 
 # Utilities

@@ -1,5 +1,5 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
+  "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
   opts =  {
     ensure_installed = { "c", "python", "rust", "vim", "lua" },
@@ -7,7 +7,7 @@ return {
     sync_install = false,
     auto_install = true,
     highlight = {
-      enable = true
+      enable = true,
     }
   }
 }

@@ -58,4 +58,4 @@ diagnostic.config({
     border = "single",
   },
 })
-map("<Leader>e", diagnostic.open_float, "Open diagnostic")
+map("<leader>e", diagnostic.open_float, "Open diagnostic")
