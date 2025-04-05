@@ -45,7 +45,6 @@ map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
 local diagnostic = vim.diagnostic
-
 diagnostic.config({
   underline = false,
   virtual_text = false,
