@@ -38,7 +38,24 @@ local map = function(keys, func, desc, mode)
   vim.keymap.set(mode, keys, func, { desc = "LSP: " .. desc })
 end
 
+
 map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+
+local diagnostic = vim.diagnostic
+
+diagnostic.config({
+  underline = false,
+  virtual_text = false,
+  virtual_lines = false,
+  severity_sort = true,
+  float = {
+    source = true,
+    header = "Diagnostics:",
+    prefix = " ",
+    border = "single",
+  },
+})
+map("<Leader>e", diagnostic.open_float, "Open diagnostic")

@@ -1,4 +1,6 @@
 return {
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
+  {"nvimdev/indentmini.nvim", opts = { }, },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -7,19 +9,10 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 			return { transparent = vim.g.transparent_enabled }
 		end,
-	},
-
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{
-		"nvim-tree/nvim-tree.lua",
-		event = "VeryLazy",
-    opts = { },
-	},
-
+  },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = { },
+    "fladson/vim-kitty",
+    ft = "kitty",
   },
 
   "xiyaowong/transparent.nvim",

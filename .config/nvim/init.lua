@@ -21,10 +21,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true} )
-
-vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
-vim.keymap.set("n", "<Space>n", ":NvimTreeFocus<CR>")
+vim.api.nvim_set_keymap("i", "<C-e>", "<Esc>",  { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "jj",    "<Esc>",  { noremap = true, silent = true} )
 
 local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<c-p>", telescope.find_files, {})
