@@ -4,6 +4,7 @@ require("mason").setup()
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
+lspconfig["rust_analyzer"].setup({ capabilities = capabilities })
 lspconfig["pyright"].setup({ capabilities = capabilities })
 lspconfig["clangd"].setup({ capabilities = capabilities })
 lspconfig["lua_ls"].setup({ capabilities = capabilities })
@@ -11,6 +12,11 @@ lspconfig["lua_ls"].setup({ capabilities = capabilities })
 -- pyright
 lspconfig.pyright.setup({
   filetype = { "python" },
+})
+
+-- rust-analyzer
+lspconfig.rust_analyzer.setup({
+  filetype = { "rust" },
 })
 
 -- lua_ls
@@ -38,11 +44,11 @@ local map = function(keys, func, desc, mode)
   vim.keymap.set(mode, keys, func, { desc = "LSP: " .. desc })
 end
 
-
 map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+
 
 local diagnostic = vim.diagnostic
 diagnostic.config({
