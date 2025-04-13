@@ -6,6 +6,13 @@ return {
       theme = "tokyonight-night",
     },
     sections = {
+      lualine_c = {
+        {
+          require('tmux-status').tmux_windows,
+          cond = require('tmux-status').show,
+          padding = { left = 3 },
+        },
+      },
       lualine_a = {
         {
           "filename",

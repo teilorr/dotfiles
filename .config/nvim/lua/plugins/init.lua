@@ -14,13 +14,17 @@ return {
     "fladson/vim-kitty",
     ft = "kitty",
   },
-
+  {
+    "christopher-francisco/tmux-status.nvim",
+    lazy = true,
+    opts = {},
+  },
   "xiyaowong/transparent.nvim",
 
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-cmdline",
 
 	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
+  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
 }
